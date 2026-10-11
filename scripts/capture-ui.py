@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Host-only screenshot driver. Uses observed UI bounds; does not alter app state directly."""
 import json, re, subprocess, time, xml.etree.ElementTree as ET
+import os
 from pathlib import Path
-ADB = str(Path.home() / "Library/Android/sdk/platform-tools/adb")
+ADB = str(Path(os.environ.get('ANDROID_HOME', str(Path.home() / 'Library/Android/sdk'))) / 'platform-tools/adb')
 SERIAL = "emulator-5554"
 PACKAGE = "staff.android.migration"
 OUT = Path(__file__).resolve().parents[1] / "evidence/2026-10-07-common-goods/ui"
