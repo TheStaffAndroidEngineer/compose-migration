@@ -1,0 +1,17 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="wrap_content" android:orientation="vertical" android:paddingBottom="20dp">
+    <LinearLayout android:id="@+id/product_layout" android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="top">
+        <ImageView android:id="@+id/product_icon" android:layout_width="112dp" android:layout_height="112dp" android:background="@drawable/icon_background"
+            android:scaleType="centerCrop" android:importantForAccessibility="no" />
+        <LinearLayout android:id="@+id/product_details" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:layout_marginStart="16dp" android:orientation="vertical">
+            <TextView android:includeFontPadding="false" android:id="@+id/product_title" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textSize="20sp" android:fontFamily="@font/google_sans_bold" android:textColor="@color/ink" />
+            <TextView android:includeFontPadding="false" android:id="@+id/product_note" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textSize="14sp" android:textColor="@color/muted" android:layout_marginTop="6dp" />
+            <Button android:includeFontPadding="false" android:id="@+id/toggle_saved" android:stateListAnimator="@null" android:elevation="0dp" android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp"
+                android:background="@drawable/saved_action" android:drawablePadding="8dp" android:paddingHorizontal="16dp" android:paddingVertical="8dp"
+                android:minHeight="48dp" android:textSize="14sp" android:fontFamily="@font/google_sans_bold" android:textColor="@color/accent" android:textAllCaps="false" />
+        </LinearLayout>
+    </LinearLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:layout_marginTop="20dp" android:background="@color/rule" />
+</LinearLayout>

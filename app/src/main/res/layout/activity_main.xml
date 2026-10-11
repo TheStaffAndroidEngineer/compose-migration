@@ -1,0 +1,52 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/root" android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView android:includeFontPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp" android:paddingVertical="16dp" android:gravity="center_vertical"
+        android:drawableStart="@drawable/ic_common_goods" android:drawablePadding="12dp"
+        android:text="@string/brand" android:fontFamily="@font/sora_bold" android:textSize="18sp" android:textColor="@color/ink" />
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/rule" />
+    <FrameLayout android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1">
+        <LinearLayout android:id="@+id/views_container" android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="vertical">
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="24dp" android:paddingTop="20dp" android:paddingBottom="16dp">
+                <TextView android:includeFontPadding="false" android:id="@+id/screen_title" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:text="@string/headline" android:fontFamily="@font/sora_bold" android:textSize="28sp" android:textColor="@color/ink" />
+                <TextView android:includeFontPadding="false" android:id="@+id/views_saved_count" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:fontFamily="@font/google_sans_regular" android:textSize="16sp" android:textColor="@color/muted" />
+                <TextView android:includeFontPadding="false" android:id="@+id/views_empty_hint" android:layout_width="match_parent" android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp" android:text="@string/saved_empty" android:textSize="14sp" android:textColor="@color/ink" android:visibility="gone" />
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView android:id="@+id/views_list" android:layout_width="match_parent"
+                android:layout_height="0dp" android:layout_weight="1" android:clipToPadding="false" android:paddingHorizontal="24dp" android:paddingBottom="20dp" />
+        </LinearLayout>
+        <androidx.compose.ui.platform.ComposeView android:id="@+id/compose_host" android:layout_width="match_parent"
+            android:layout_height="match_parent" android:visibility="gone" />
+    </FrameLayout>
+    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/rule" />
+    <Button android:includeFontPadding="false" android:id="@+id/lab_controls_toggle" style="@style/LabButton" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:gravity="center_vertical|start" android:paddingHorizontal="24dp" android:background="@color/panel" />
+    <staff.android.migration.LabControlsScrollView android:id="@+id/lab_controls" android:layout_width="match_parent"
+        android:layout_height="wrap_content" android:visibility="gone" android:background="@color/panel" android:fillViewport="false">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingHorizontal="20dp" android:paddingBottom="12dp">
+            <TextView android:includeFontPadding="false" android:layout_width="match_parent" android:layout_height="wrap_content" android:text="@string/lab_heading"
+                android:textSize="12sp" android:textColor="@color/muted" android:paddingTop="4dp" />
+            <staff.android.migration.RendererChoices android:id="@+id/renderer_group" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:orientation="horizontal" android:checkedButton="@id/mode_views">
+                <RadioButton android:id="@+id/mode_views" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content"
+                    android:minHeight="48dp" android:text="@string/views" android:textSize="13sp" android:textColor="@color/ink" />
+                <RadioButton android:id="@+id/mode_compose" android:layout_width="0dp" android:layout_weight="1.2" android:layout_height="wrap_content"
+                    android:minHeight="48dp" android:text="@string/compose" android:textSize="13sp" android:textColor="@color/ink" />
+                <RadioButton android:id="@+id/mode_bug" android:layout_width="0dp" android:layout_weight="1.4" android:layout_height="wrap_content"
+                    android:minHeight="48dp" android:text="@string/snapshot_bug" android:textSize="13sp" android:textColor="@color/ink" />
+            </staff.android.migration.RendererChoices>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal">
+                <Button android:includeFontPadding="false" style="@style/LabButton" android:id="@+id/rename_camera" android:layout_width="0dp" android:layout_weight="2" android:layout_height="wrap_content" android:text="@string/rename_camera" />
+                <Button android:includeFontPadding="false" style="@style/LabButton" android:id="@+id/reset" android:layout_width="0dp" android:layout_weight="1" android:layout_height="wrap_content" android:text="@string/reset" />
+            </LinearLayout>
+            <TextView android:includeFontPadding="false" android:id="@+id/source_status" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:paddingVertical="8dp" android:textSize="14sp" android:fontFamily="@font/google_sans_bold" android:textColor="@color/accent" android:accessibilityLiveRegion="polite" />
+            <TextView android:includeFontPadding="false" android:id="@+id/mode_hint" android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:textSize="12sp" android:textColor="@color/muted" />
+        </LinearLayout>
+    </staff.android.migration.LabControlsScrollView>
+</LinearLayout>

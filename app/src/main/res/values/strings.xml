@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Common Goods · Chapter 6</string>
+    <string name="headline">Saved</string>
+    <string name="views">Views</string>
+    <string name="compose">Compose</string>
+    <string name="snapshot_bug">Snapshot bug</string>
+    <string name="rename_camera">Rename camera</string>
+    <string name="reset">Reset</string>
+    <plurals name="source_status">
+        <item quantity="one">Store: %1$s · %2$d saved</item>
+        <item quantity="other">Store: %1$s · %2$d saved</item>
+    </plurals>
+    <plurals name="saved_count">
+        <item quantity="one">%1$d saved item</item>
+        <item quantity="other">%1$d saved items</item>
+    </plurals>
+    <string name="save">Save</string>
+    <string name="remove">Remove</string>
+    <string name="save_item">Save %1$s</string>
+    <string name="remove_item">Remove %1$s</string>
+    <string name="live_hint">Rename or remove an item, then switch renderers. Both read the same state.</string>
+    <string name="bug_hint">Rename the camera. The store changes; this screen keeps its first snapshot. Switch away and back to recapture it.</string>
+    <string name="brand">Common Goods</string>
+    <string name="lab_controls">Lab controls · %1$s</string>
+    <string name="lab_heading">Chapter 6 · State observation</string>
+    <string name="note">Your note · %1$s</string>
+    <string name="saved_empty">Nothing saved right now. Tap Save below to keep a good find.</string>
+</resources>
